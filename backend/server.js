@@ -22,6 +22,14 @@ mongoose.connect(MONGO_URI)
   });
 
 // Routes
+app.get('/api/health', (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    message: 'Server is running',
+    timestamp: new Date()
+  });
+});
+
 app.post('/api/contact', async (req, res) => {
   try {
     const { name, email, phone, serviceType, address, message } = req.body;
