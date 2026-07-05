@@ -148,15 +148,15 @@ const AdminDashboard = () => {
   return (
     <>
       <style>{`
-        .admin-layout { display: flex; flex-direction: row; }
-        .admin-sidebar { width: 260px; flex-shrink: 0; display: flex; flex-direction: column; }
+        .admin-layout { display: flex; flex-direction: row; height: 100vh; overflow: hidden; }
+        .admin-sidebar { width: 260px; flex-shrink: 0; display: flex; flex-direction: column; background: #0f172a; color: white; }
         .admin-nav { display: flex; flex-direction: column; flex: 1; }
         .admin-header { display: flex; justify-content: space-between; align-items: center; }
         .admin-header-controls { display: flex; align-items: center; gap: 16px; }
         .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
         @media (max-width: 768px) {
-          .admin-layout { flex-direction: column; }
-          .admin-sidebar { width: 100%; }
+          .admin-layout { flex-direction: column; height: auto; overflow: visible; }
+          .admin-sidebar { width: 100%; height: auto; }
           .admin-nav { flex-direction: row; flex-wrap: wrap; padding: 16px !important; }
           .admin-nav a { flex: 1; justify-content: center; text-align: center; }
           .admin-nav p { width: 100%; text-align: center; margin-bottom: 8px; }
