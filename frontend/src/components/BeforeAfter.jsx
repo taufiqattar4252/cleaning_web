@@ -161,11 +161,7 @@ const BeforeAfter = () => {
         <h2 className="section-title">See the <span>CleanCanada Difference</span></h2>
         <p className="section-subtitle">Drag the sliders below to see the stunning results of our professional cleaning services.</p>
         
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
-          gap: '40px'
-        }}>
+        <div className="before-after-grid">
           {examples.map((ex, idx) => (
             <div key={idx} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <ImageSlider 

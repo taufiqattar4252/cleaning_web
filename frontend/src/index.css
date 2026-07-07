@@ -282,6 +282,19 @@ img {
   transform: scale(1.1) rotate(5deg);
 }
 
+/* Before & After Grid */
+.before-after-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .before-after-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Animations */
 .reveal {
   opacity: 0;
@@ -295,6 +308,74 @@ img {
 }
 
 /* Hero specific */
+.hero {
+  padding: 180px 0 120px;
+  position: relative;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 99px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: white;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.hero-title-highlight {
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 700px;
+  margin: 0 auto 48px;
+  font-weight: 300;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-explore {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(5px);
+}
+
+.btn-explore:hover {
+  background: rgba(255,255,255,0.2);
+}
+
 .hero-bg {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -319,6 +400,23 @@ img {
 }
 
 @media (max-width: 992px) {
+  .hero {
+    padding: 100px 0 60px;
+    min-height: 100svh;
+  }
+  .hero-badge {
+    margin-bottom: 20px;
+    padding: 4px 16px;
+    font-size: 0.8rem;
+  }
+  .hero-title {
+    margin-bottom: 16px;
+  }
+  .hero-desc {
+    margin-bottom: 32px;
+    font-size: 1rem;
+  }
+
   .header .container {
     height: 70px;
   }
